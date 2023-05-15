@@ -1,0 +1,69 @@
+@keyframes selectAnimation {
+    from {
+        transform: scale(0);
+        opacity: 1;
+    }
+    to {
+        transform: scale(5.5);
+        opacity: 0;
+        box-shadow: 0px 0px 0px 0px transparent;
+        border-color: transparent;
+    }
+}
+
+.ClickEffectClass {
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    pointer-events: none;
+    background-color: rgb(205, 255, 238);
+
+    border-radius: 50%;
+    border: 0.1px solid rgb(0, 0, 0);
+
+    animation: selectAnimation 0.4s ease-out;
+}
+
+.BottomMargin {
+    margin-bottom: 40%;
+}
+.LineContainer {
+    display: flex;
+    justify-content: center;
+}
+.MainLine {
+    color: rgb(0, 0, 0);
+    opacity: 0.45;
+    margin: 2% 0% 2% 0%;
+    width: 90%;
+}
+
+.Button {
+    display: inline-flex;
+    background-color: rgb(59, 59, 59);
+    color: rgb(227, 227, 227);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    font-size: 60%;
+
+    width: 220px;
+    height: 30px;
+    padding: 20px;
+
+    border: 1px solid transparent;
+    border-radius: 15px;
+
+    transition: background-color 0.2s, box-shadow 0.35s;
+} .Button:hover {
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 15px 5px rgb(87, 87, 87);
+    color: black;
+    border: 1px solid black;
+} .Button:active {
+    transition: background-color 0.1s;
+    cursor: pointer;
+    background-color: rgb(197, 197, 197);
+}
